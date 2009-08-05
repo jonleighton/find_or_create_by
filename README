@@ -1,0 +1,14 @@
+FindOrCreateBy
+==============
+
+Adds find_or_create_by and find_or_create_by! class methods to ActiveRecord::Base. Be aware of
+the security implications, as the conditions are passed straight through to find, so an attacker
+could potentially use this to retrieve arbitrary records from the database.
+
+Example
+=======
+
+Person.find_or_create_by(:name => "Jon", :age => 20) # => Returns false if the record is not found and creation fails
+Person.find_or_create_by!(:name => "Jon", :age => 20) # => Raises ActiveRecord::RecordInvalid if the record is not found and creation fails
+
+Copyright (c) 2009 Jon Leighton, released under the MIT license
