@@ -30,7 +30,6 @@ begin
     gemspec.homepage = "http://github.com/jonleighton/find_or_create_by"
     gemspec.description = "README"
     gemspec.authors = ["Jon Leighton"]
-    gemspec.version = "1.0.0"
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
